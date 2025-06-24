@@ -18,6 +18,12 @@ public class GuessNumberGame {
 
 
             while (true) {
+                if (!sc.hasNextInt()) {
+                    System.out.println("❌ Invalid input. Please enter a whole number between 1 and 100.");
+                    sc.next(); // Discard invalid input
+                    continue;
+                }
+
                 guess = sc.nextInt();
 
 
