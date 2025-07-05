@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class MaxAndMinOfArray {
     static int max_of_array(int[] marks){
         int max=marks[0];
+        //using for loop
         for(int i=0;i<marks.length;i++)
         {
             if(marks[i]>max)
@@ -16,10 +17,11 @@ public class MaxAndMinOfArray {
     static int min_of_array(int[] marks)
     {
         int min=marks[0];
-        for(int i=0;i<marks.length;i++)
+        //using enhanced loop
+        for(int i:marks)
         {
-            if(marks[i]<min)
-                min=marks[i];
+            if(i<min)
+                min=i;
         }
 
         return min;
@@ -29,7 +31,7 @@ public class MaxAndMinOfArray {
         Scanner scanner=new Scanner(System.in);
         int n = scanner.nextInt();
 
-        // Step 2: Create array and read values
+
         int[] marks = new int[n];
         System.out.println("Enter " + n + " numbers:");
         for (int i = 0; i < n; i++) {
