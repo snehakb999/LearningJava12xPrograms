@@ -1,5 +1,7 @@
+
 package ex_01_Java_Basics;
 
+import java.util.Scanner;
 public class MaxAndMinOfArray {
     static int max_of_array(int[] marks){
         int max=marks[0];
@@ -23,7 +25,19 @@ public class MaxAndMinOfArray {
         return min;
     }
     public static void main(String[] args) {
-        int[] marks={90,78,23,24,54,34,12,67,87,56,97};
+        System.out.print("Enter the number of elements: ");
+        Scanner scanner=new Scanner(System.in);
+        int n = scanner.nextInt();
+
+        // Step 2: Create array and read values
+        int[] marks = new int[n];
+        System.out.println("Enter " + n + " numbers:");
+        for (int i = 0; i < n; i++) {
+            marks[i] = scanner.nextInt();
+        }
+
+
+        // int[] marks={90,78,23,24,54,34,12,67,87,56,97};
         int result=max_of_array(marks);
         System.out.println("max of this array is ,"+result);
         int result1=min_of_array(marks);
